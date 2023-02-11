@@ -2,13 +2,17 @@ import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./App.css";
-import Navbar from "./NavBar/NavBar";
-import Intro from "./Intro/intro";
+import UserLogin from "./UserLogin/Login";
+import { Route } from "react-router-dom";
+import { Routes } from "react-router-dom";
+import Home from "./Home";
 const App = () => {
   return (
     <div className="App">
-      <Navbar />
-      <Intro />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/Login" element={<UserLogin />} />
+      </Routes>
     </div>
   );
 };
