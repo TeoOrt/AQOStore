@@ -2,9 +2,8 @@ import userEvent from "@testing-library/user-event";
 import React, { useState } from "react";
 import { useEffect } from "react";
 import "./App.css";
-import Escape from "./Escape.svg";
-import Navbar from "./NavBar";
-import Intro from "./intro";
+import Navbar from "./NavBar/NavBar";
+import Intro from "./Intro/intro";
 const App = () => {
   return (
     <div className="App">
