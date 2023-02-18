@@ -6,12 +6,15 @@ import UserLogin from "./UserLogin/Login";
 import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import Home from "./Home";
+import SignUpUser from "./UserLogin/UserSignUp/SignUp";
+
 const App = () => {
   return (
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/Login" element={<UserLogin />} />
+        <Route path="/Login/SignUp" element={<SignUpUser />} />
       </Routes>
     </div>
   );

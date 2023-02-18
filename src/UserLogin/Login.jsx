@@ -15,9 +15,9 @@ const UserLogin = () => {
           style={Login_styles.input}
         />
         <button type="submit" style={Login_styles.button}>
-          Login
+          Login with Google
         </button>
-        <a href="/" style={Login_styles.a_Login}>
+        <a href="/Login/SignUp" style={Login_styles.a_Login}>
           Create User
         </a>
       </form>
