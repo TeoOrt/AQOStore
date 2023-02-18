@@ -1,8 +1,17 @@
 import React from "react";
-// import "./signup.css";
-
-const Container = ({ children }) => {
-  return <div className="container">{children}</div>;
+ import "./style.css";
+import AQOLogo from "../../NavBar/AQOLOGO.svg"
+ const Container = ({ children }) => {
+  return (
+    <div className="container">
+      <div className="logo-container">
+        <a href="/" className="logo-container-anchor">
+        <img src={AQOLogo} alt="Logo" className="logo" />
+        </a>
+      </div>
+      {children}
+    </div>
+  );
 };
 
 const Heading = ({ children }) => {
