@@ -1,14 +1,14 @@
 import React from "react";
 import Navbar from "./NavBar/NavBar";
 import Intro from "./Intro/intro";
-import { useEffect, useState } from "react";
+import HomePage from "./Items/items";
 
 const Home = () => {
   return (
     <div className="Home">
       <Navbar />
       <Intro />
-      <p>Hi</p>
+      <HomePage />
     </div>
   );
 };
