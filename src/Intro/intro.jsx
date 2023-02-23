@@ -5,13 +5,13 @@ import intro_styles from "./introStyles";
 const Intro = () => {
   return (
     <div className="QuotesPage" style={intro_styles.QuotesPage}>
-      <card style={intro_styles.card}>
+      <div style={intro_styles.card}>
         <img
           src={Escape}
           alt="Escape from Reality"
           style={intro_styles.EscapeFromReality}
         />
-      </card>
+      </div>
     </div>
   );
 };
