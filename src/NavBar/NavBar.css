@@ -14,14 +14,13 @@
   }
   
   .h1 {
-    margin: 0;
     font-weight: 700;
     font-family: Corben, sans-serif;
     font-size: 34px;
   }
   
   .navbar-link {
-    margin: 0 33px;
+    margin: 0 23px;
     text-decoration: none;
     color: #000000;
     font-weight: 400;
@@ -36,7 +35,7 @@
   }
   
   .FindUs {
-    margin-right: 30px;
+    margin-right: 20px;
     font-weight: 700;
     font-family: Corben, sans-serif;
     font-size: 20px;
