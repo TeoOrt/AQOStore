@@ -1,63 +1,40 @@
-const Styles = {
-  navStyles: {
+const styles = {
+  nav: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "10px",
-    backgroundColor: "#fff",
+    padding: "20px",
     boxShadow: "0px 1px 4px rgba(0, 0, 0, 0.1)",
   },
-  logoContainerStyles: {
+  section: {
     display: "flex",
     alignItems: "center",
   },
-  logoStyles: {
-    height: "150px",
-    weight: "150px",
-    marginRight: "20px",
+  h1: {
+    marginLeft: "10px",
+    fontWeight: "700",
+    fontFamily: "Corben, sans-serif",
+    fontSize: "34px",
   },
-  logoTextStyles: {
-    fontSize: "1.5rem",
-    fontWeight: "bold",
-  },
-  navLinksStyles: {
-    display: "flex",
-    justifyContent: "center",
-    flexGrow: 1,
-    margin: "0 20px",
-  },
-  navLinkStyles: {
-    fontSize: "1.2rem",
-    margin: "0 10px",
+  a: {
+    margin: "0 33px 0 33px",
     textDecoration: "none",
-    color: "#333",
+    color: "#000000",
+    fontWeight: "400",
+    fontSize: "20px",
+    fontFamily: "Corben, san-serif",
   },
-  cartContainerStyles: {
-    display: "flex",
-    alignItems: "center",
+  AqoLogo: {
+    width: "146px",
+    height: "129px",
   },
-  cartLogoStyles: {
-    height: "50px",
-  },
-  mobileStyles: {
-    "@media (max-width: 768px)": {
-      navLinksStyles: {
-        display: "none",
-      },
-      logoTextStyles: {
-        fontSize: "1.2rem",
-      },
-      cartLogoStyles: {
-        height: "30px",
-      },
-      logoStyles: {
-        height: "40px",
-      },
-      logoContainerStyles: {
-        marginRight: "auto",
-      },
-    },
+  FindUs: {
+    marginRight: "30px",
+    fontWeight: "700",
+    fontFamily: "Corben, sans-serif",
+    fontSize: "20px",
+    color: "#000000",
+    textDecoration: "none",
   },
 };
-
-export default Styles;
+export default styles;
