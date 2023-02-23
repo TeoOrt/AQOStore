@@ -2,11 +2,10 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
     font-size: 1.2rem;
     font-weight: bold;
+    box-shadow: none;
+    background-color: #fff;
   }
   
   .section {
