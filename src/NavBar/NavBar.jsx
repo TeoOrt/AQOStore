@@ -1,77 +1,30 @@
 import React from "react";
-import AqoLogo from "./AQOLOGO.svg";
-import UserBox from "./User_box_fill.svg";
-import UserCart from "./Bag_alt_fill.svg";
-function Navbar() {
-  const styles = {
-    nav: {
-      display: "flex",
-      justifyContent: "space-between",
-      alignItems: "center",
-      padding: "20px",
-    },
-    section: {
-      display: "flex",
-      alignItems: "center",
-    },
-    h1: {
-      marginLeft: "10px",
-      fontWeight: "700",
-      fontFamily: "Corben, sans-serif",
-      fontSize: "34px",
-    },
-    a: {
-      margin: "0 33px 0 33px",
-      textDecoration: "none",
-      color: "#000000",
-      fontWeight: "400",
-      fontSize: "20px",
-      fontFamily: "Corben, san-serif",
-    },
-    AqoLogo: {
-      width: "146px",
-      height: "129px",
-    },
-    FindUs: {
-      marginRight: "30px",
-      fontWeight: "700",
-      fontFamily: "Corben, sans-serif",
-      fontSize: "20px",
-      color: "#000000",
-      textDecoration: "none",
-    },
-  };
-
+import { Link } from "react-router-dom";
+import Styles from "./NavBarStyles";
+import Aqologo from "./AQOLOGOSVG.svg";
+import User_Box from "./User_box_fill.svg";
+import Bag_alt from "./Bag_alt_fill.svg";
+const NavBar = () => {
   return (
-    <nav style={styles.nav}>
-      <div className="left-section" style={styles.section}>
-        <img src={AqoLogo} alt="Logo" style={styles.AqoLogo} />
-        <h1 style={styles.h1}>AQO Store</h1>
+    <div style={Styles.navStyles}>
+      <div style={Styles.logoContainerStyles}>
+        <img src={Aqologo} alt="logo" style={Styles.logoStyles} />
+        <p style={Styles.logoTextStyles}>AQO Store</p>
       </div>
-      <div className="middle-section" style={styles.section}>
-        <a href="https://www.instagram.com/aqo.jewelry/" style={styles.FindUs}>
-          Find us
-        </a>
-        <a href="#" style={styles.a}>
+      <div style={Styles.navLinksStyles}>
+        <Link to="/" style={Styles.navLinkStyles}>
           Shop
-        </a>
-        <a href="#" style={styles.a}>
-          FAQ
-        </a>
-        <a href="#" style={styles.a}>
-          Our Story
-        </a>
+        </Link>
+        <Link to="/earings" style={Styles.navLinkStyles}>
+          Earrings
+        </Link>
       </div>
-      <div className="right-section" style={styles.section}>
-        <a href="#">
-          <img src={UserCart} alt="Cart" />
-        </a>
-        <a href="/Login">
-          <img src={UserBox} alt="Account" />
-        </a>
+      <div style={Styles.cartContainerStyles}>
+        <img src={Bag_alt} alt="cart-logo" style={Styles.cartLogoStyles} />
       </div>
-    </nav>
+      {/* <style>{Styles.mobileStyles["@media (max-width: 768px)"]}</style> */}
+    </div>
   );
-}
+};
 
-export default Navbar;
+export default NavBar;
