@@ -18,14 +18,14 @@ function Navbar() {
         >
           Jewelry
         </a>
-        <a href="/" className="navbar-link">
+        <a href="#store-grid" className="navbar-link">
           Accesories
         </a>
       </div>
       <div className="section">
-        <a href="/">
+        {/* <a href="/">
           <img src={UserCart} alt="Cart" className="navbar-icon" />
-        </a>
+        </a> */}
         <a href="/Login">
           <img src={UserBox} alt="Account" className="navbar-icon" />
         </a>

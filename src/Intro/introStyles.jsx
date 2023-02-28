@@ -3,7 +3,6 @@ const introStyles = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    height: "80vh",
   },
   card: {
     display: "flex",
