@@ -1,17 +1,29 @@
-import React from "react";
-
-const intro_styles = {
+const introStyles = {
   QuotesPage: {
-    width: "1318px",
-    height: "590px",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    height: "80vh",
   },
   card: {
-    marginLeft: "125pt",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "center",
+    maxWidth: "100%",
   },
   EscapeFromReality: {
-    width: "528px",
-    height: "528px",
+    maxWidth: "100%",
+    height: "550pt",
+    paddingTop: "10pt",
+  },
+  "@media only screen and (max-width: 768px)": {
+    QuotesPage: {
+      height: "50vh",
+    },
+    card: {
+      flexDirection: "column",
+    },
   },
 };
 
-export default intro_styles;
+export default introStyles;
