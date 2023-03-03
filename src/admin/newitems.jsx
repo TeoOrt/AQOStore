@@ -10,7 +10,28 @@ function MyForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // You can handle form submission logic here, such as sending data to a server
+
+    // Create a new FormData object
+    const formData = new FormData();
+
+    // Add form data to the FormData object
+    formData.append("title", title);
+    formData.append("instagramLink", instagramLink);
+    formData.append("image", image);
+
+    // Send a POST request to the server with the form data
+    fetch("/upload", {
+      method: "POST",
+      body: formData
+    })
+      .then(response => response.json())
+      .then(data => {
+        console.log(data);
+        // Update the UI with the newly uploaded image
+      })
+      .catch(error => {
+        console.error(error);
+      });
   };
 
   const handleImageChange = (e) => {
@@ -30,7 +51,7 @@ function MyForm() {
           className="my-form"
           onMount={handleFormMount}
         >
-          <h2 className="form-title">Upload Jewlery</h2>
+          <h2 className="form-title">Upload Jewelry</h2>
 
           <div className="form-group">
             <label htmlFor="title" className="form-label">
