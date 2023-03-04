@@ -1,17 +1,37 @@
-# Use an official Node.js runtime as a parent image
-FROM node:14-alpine
+# Stage 1 - Build stage
+FROM node:19-alpine as builder
 
-# Set the working directory to /app
 WORKDIR /app
 
-# Copy the package.json and package-lock.json files to the working directory
-COPY package*.json ./
+# Copy package.json and yarn.lock
+COPY package*.json yarn.lock ./
 
-# Install app dependencies
-RUN yarn install --production
+# Install dependencies
+RUN yarn install --only=production
 
-# Copy the built React app to the working directory
-COPY build/ ./
+# Copy the rest of the application files
+COPY . .
 
-# Set the command to start the app
-CMD ["yarn", "start"]
+# Build the application
+RUN yarn build
+
+# Stage 2 - Production stage
+FROM nginx:1.23.3-alpine
+
+# Remove default nginx website
+RUN rm -rf /usr/share/nginx/html/*
+
+# Copy build artifacts from the build stage
+COPY --from=builder /app/build /usr/share/nginx/html
+
+# Remove unnecessary files
+RUN rm -rf /usr/share/nginx/html/*.map
+
+# Copy nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80
+EXPOSE 80
+
+# Start nginx
+CMD ["nginx", "-g", "daemon off;"]
