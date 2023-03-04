@@ -8,6 +8,7 @@ import { Routes } from "react-router-dom";
 import Home from "./Home";
 import SignUpUser from "./UserLogin/UserSignUp/SignUp";
 import NavBarTest from "./SampleObjs/SampleJewlery";
+import MyForm from "./admin/newitems";
 
 const App = () => {
   return (
@@ -17,6 +18,7 @@ const App = () => {
         <Route path="/Sample" element={<NavBarTest />} />
         <Route path="/Login" element={<UserLogin />} />
         <Route path="/Login/SignUp" element={<SignUpUser />} />
+        <Route path="/AdminAdd" element={<MyForm />} />
       </Routes>
     </div>
   );
