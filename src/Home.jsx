@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import Navbar from "./NavBar/NavBar";
 import Intro from "./Intro/intro";
 import StoreGrid from "./Items/columns";
-import test from "./Items/earings.png";
-
+import test from "./NavBar/AQOLOGO.svg";
+import FooterContainer from "./Footer/footer";
 const Home = () => {
   const [items, setItems] = useState([
     {
@@ -28,15 +28,12 @@ const Home = () => {
     },
   ]);
 
-  const handleAddItem = (item) => {
-    setItems([...items, item]);
-  };
-
   return (
     <div className="Home">
       <Navbar />
       <Intro />
       <StoreGrid items={items} />
+      <FooterContainer />
     </div>
   );
 };
