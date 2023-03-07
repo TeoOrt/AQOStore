@@ -4,7 +4,6 @@ import "./MyForm.css";
 
 function MyForm() {
   const [title, setTitle] = useState("");
-  const [instagramLink, setInstagramLink] = useState("");
   const [image, setImage] = useState(null);
   const [showForm, setShowForm] = useState(false);
 
@@ -16,20 +15,19 @@ function MyForm() {
 
     // Add form data to the FormData object
     formData.append("title", title);
-    formData.append("instagramLink", instagramLink);
     formData.append("image", image);
 
     // Send a POST request to the server with the form data
     fetch("/upload", {
       method: "POST",
-      body: formData
+      body: formData,
     })
-      .then(response => response.json())
-      .then(data => {
+      .then((response) => response.json())
+      .then((data) => {
         console.log(data);
         // Update the UI with the newly uploaded image
       })
-      .catch(error => {
+      .catch((error) => {
         console.error(error);
       });
   };
@@ -64,22 +62,6 @@ function MyForm() {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Enter title here"
-              className="form-input"
-              required
-            />
-          </div>
-
-          <div className="form-group">
-            <label htmlFor="instagramLink" className="form-label">
-              Instagram Link
-            </label>
-            <input
-              type="url"
-              id="instagramLink"
-              name="instagramLink"
-              value={instagramLink}
-              onChange={(e) => setInstagramLink(e.target.value)}
-              placeholder="Enter Instagram link here"
               className="form-input"
               required
             />
