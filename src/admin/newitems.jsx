@@ -15,12 +15,14 @@ function MyForm() {
     const formData = new FormData();
 
     // Add form data to the FormData object
-    formData.append("title", title);
     formData.append("image", image);
-    formData.append("jewelryType", jewelryType);
-
+    const data = {
+      title,
+      jewelryType,
+    };
+    formData.append("data", JSON.stringify(data));
     // Send a POST request to the server with the form data
-    fetch("/api/jewelry", {
+    fetch("http://127.0.0.1:3030/api/data", {
       method: "POST",
       body: formData,
     })
@@ -74,7 +76,7 @@ function MyForm() {
             </label>
             <input
               type="text"
-              name="Jewlery Type"
+              name="jewleryType"
               value={jewelryType}
               onChange={(e) => setJewelryType(e.target.value)}
               placeholder="Enter JewelryType here"
