@@ -6,6 +6,7 @@ function MyForm() {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState(null);
   const [showForm, setShowForm] = useState(false);
+  const [jewelryType, setJewelryType] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,9 +17,10 @@ function MyForm() {
     // Add form data to the FormData object
     formData.append("title", title);
     formData.append("image", image);
+    formData.append("jewelryType", jewelryType);
 
     // Send a POST request to the server with the form data
-    fetch("/upload", {
+    fetch("/api/jewelry", {
       method: "POST",
       body: formData,
     })
@@ -62,6 +64,20 @@ function MyForm() {
               value={title}
               onChange={(e) => setTitle(e.target.value)}
               placeholder="Enter title here"
+              className="form-input"
+              required
+            />
+          </div>
+          <div>
+            <label htmlFor="title" className="form-label">
+              Jewelry Type
+            </label>
+            <input
+              type="text"
+              name="Jewlery Type"
+              value={jewelryType}
+              onChange={(e) => setJewelryType(e.target.value)}
+              placeholder="Enter JewelryType here"
               className="form-input"
               required
             />
