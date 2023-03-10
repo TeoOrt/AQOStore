@@ -37,6 +37,6 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 #Fix Curl Vulnerabilities
-RUN apt-get install -y curl
-
+RUN RUN apk update && \
+    apk add curl
 
