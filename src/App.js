@@ -9,7 +9,7 @@ import Home from "./Home";
 import SignUpUser from "./UserLogin/UserSignUp/SignUp";
 import NavBarTest from "./SampleObjs/SampleJewlery";
 import MyForm from "./admin/newitems";
-
+import About from "./AboutPage/about";
 const App = () => {
   return (
     <div className="App">
@@ -19,6 +19,7 @@ const App = () => {
         <Route path="/Login" element={<UserLogin />} />
         <Route path="/Login/SignUp" element={<SignUpUser />} />
         <Route path="/AdminAdd" element={<MyForm />} />
+        <Route path="About" element={<About />} />
       </Routes>
     </div>
   );
