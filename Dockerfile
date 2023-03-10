@@ -39,4 +39,4 @@ CMD ["nginx", "-g", "daemon off;"]
 #Fix Curl Vulnerabilities
 RUN apt-get install -y curl
 
-RUN apt-get update && apt-get install -y curl
+
