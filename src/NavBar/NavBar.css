@@ -35,6 +35,10 @@
     margin-right: 0.5rem;
   }
   
+  .navbar-icon{
+    width: 180px;
+    height: 129px;
+  }
   .FindUs {
     margin-right: 20px;
     font-weight: 700;

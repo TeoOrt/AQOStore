@@ -10,6 +10,7 @@ import SignUpUser from "./UserLogin/UserSignUp/SignUp";
 import NavBarTest from "./SampleObjs/SampleJewlery";
 import MyForm from "./admin/newitems";
 import About from "./AboutPage/about";
+import Logged_Home from "./LoggedHome";
 const App = () => {
   return (
     <div className="App">
@@ -20,6 +21,7 @@ const App = () => {
         <Route path="/Login/SignUp" element={<SignUpUser />} />
         <Route path="/AdminAdd" element={<MyForm />} />
         <Route path="About" element={<About />} />
+        <Route path="/LoggedHome" element={<Logged_Home />} />
       </Routes>
     </div>
   );

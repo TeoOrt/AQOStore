@@ -1,8 +1,7 @@
 import React from "react";
 import AqoLogo from "./AQOLOGOSVG.svg";
-import UserBox from "./User_box_fill.svg";
-import UserCart from "./Bag_alt_fill.svg";
 import "./NavBar.css";
+import Ballons from "./Ballons.svg";
 
 function Navbar() {
   return (
@@ -21,14 +20,18 @@ function Navbar() {
         <a href="#store-grid" className="navbar-link">
           Accesories
         </a>
+        <a href="#store-grid" className="navbar-link">
+          Ballon Gallery
+        </a>
       </div>
       <div className="section">
+        <img src={Ballons} alt="Ballons" className="navbar-icon" />
         {/* <a href="/">
           <img src={UserCart} alt="Cart" className="navbar-icon" />
         </a> */}
-        <a href="/Login">
+        {/* <a href="/Login">
           <img src={UserBox} alt="Account" className="navbar-icon" />
-        </a>
+        </a> */}
       </div>
     </nav>
   );

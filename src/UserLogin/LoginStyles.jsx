@@ -8,7 +8,9 @@ const Login_styles = {
     textAlign: " center",
     color: "black",
   },
-
+  a: {
+    textDecoration: "None",
+  },
   logo_letter: {
     fontFamily: "Corben",
     fontStyle: " normal",
