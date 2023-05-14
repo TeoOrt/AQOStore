@@ -11,6 +11,7 @@ function StoreGrid(props) {
           image={item.image}
           name={item.name}
           price={item.price}
+          style= {item.style}
         />
       ))}
     </div>

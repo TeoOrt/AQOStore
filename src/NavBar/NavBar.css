@@ -30,8 +30,8 @@
   }
   
   .navbar-logo {
-    width: 146px;
-    height: 129px;
+    width: 200px;
+    height: 200px;
     margin-right: 0.5rem;
   }
   
@@ -64,3 +64,7 @@
     }
   }
   
+
+  .section-titles{
+    padding-right: 25vw;
+  }

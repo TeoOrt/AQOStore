@@ -4,6 +4,7 @@ import Intro from "./Intro/intro";
 import StoreGrid from "./Items/columns";
 import test from "./NavBar/AQOLOGO.svg";
 import FooterContainer from "./Footer/footer";
+import CalendarWrap from "./Calendar/cal-get";
 const Home = () => {
   const [items, setItems] = useState([
     {
@@ -11,7 +12,7 @@ const Home = () => {
       price: "$49.99",
       image: test,
     },
-    {
+    { 
       name: "Ruby Necklace",
       price: "$69.99",
       image: test,
@@ -28,11 +29,13 @@ const Home = () => {
     },
   ]);
 
+ 
   return (
     <div className="Home">
       <Navbar />
       <Intro />
       <StoreGrid items={items} />
+      <CalendarWrap />
       <FooterContainer />
     </div>
   );
