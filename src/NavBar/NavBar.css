@@ -1,11 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap');
+
 .nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     font-size: 1.2rem;
     font-weight: bold;
-    box-shadow: none;
     background-color: #fff;
+    box-shadow: none;
   }
   
   .section {
@@ -15,7 +17,7 @@
   
   .h1 {
     font-weight: 700;
-    font-family: Corben, sans-serif;
+    font-family: Corben;
     font-size: 34px;
   }
   
@@ -25,19 +27,23 @@
     color: #000000;
     font-weight: 400;
     font-size: 20px;
-    font-family: Corben, san-serif;
+    font-family: Corben;
   }
   
   .navbar-logo {
-    width: 146px;
-    height: 129px;
+    width: 200px;
+    height: 200px;
     margin-right: 0.5rem;
   }
   
+  .navbar-icon{
+    width: 180px;
+    height: 129px;
+  }
   .FindUs {
     margin-right: 20px;
     font-weight: 700;
-    font-family: Corben, sans-serif;
+    font-family: Corben;
     font-size: 20px;
     color: #000000;
     text-decoration: none;
@@ -59,3 +65,7 @@
     }
   }
   
+
+  .section-titles{
+    padding-right: 25vw;
+  }

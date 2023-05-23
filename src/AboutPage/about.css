@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap');
+
+.AboutUs{
+    height: 555px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center center;
+    transition: background-image 1s linear;
+    padding: 0;
+    margin: 0;
+}
+
+.About-title{
+    color: #000000;
+    font-family: Corben,sans-serif;
+    font-size: 35pt;
+}
+
+.AboutUs--image1 {
+    background-image: url('test.jpg');
+    background-size: cover;
+    background-position: center center;
+}
+.AboutUs h2{
+    color: #000000;
+    font-family: Corben,sans-serif;
+    font-size: 22pt;
+
+}
+
+
+  .AboutUs--image2 {
+    background-image: url('colors.jpg');
+    background-size: cover;
+    background-position: center center;
+  }
+
+  @keyframes fade {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }

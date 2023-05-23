@@ -20,7 +20,9 @@ gap: 10px;
 
 .anchor-footer{
     text-decoration: none;
+    color: #000000;
 }
 .anchor-footer:visited{
     text-decoration: underline;
+    color: #000000;
 }

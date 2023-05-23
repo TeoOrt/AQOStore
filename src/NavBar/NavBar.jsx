@@ -1,34 +1,31 @@
 import React from "react";
 import AqoLogo from "./AQOLOGOSVG.svg";
-import UserBox from "./User_box_fill.svg";
-import UserCart from "./Bag_alt_fill.svg";
 import "./NavBar.css";
+import Ballons from "./Ballons.svg";
 
 function Navbar() {
   return (
     <nav className="nav">
       <div className="section">
-        <img src={AqoLogo} alt="Logo" className="navbar-logo" />
-        <h1 className="navbar-title">AQO Store</h1>
+        <img src={Ballons} alt="Logo" className="navbar-logo" />
+        <h1 className="navbar-title">AQO Balloons</h1>
       </div>
       <div className="section">
+
+        <div className="section-titles">
         <a
-          href="https://www.instagram.com/aqo.jewelry/"
+          href="#Gallery"
           className="navbar-link"
         >
-          Jewelry
+          Balloon Gallery
         </a>
-        <a href="#store-grid" className="navbar-link">
-          Accesories
+        <a href="#Calendar" className="navbar-link">
+          Calendar
         </a>
-      </div>
-      <div className="section">
-        {/* <a href="/">
-          <img src={UserCart} alt="Cart" className="navbar-icon" />
-        </a> */}
-        <a href="/Login">
-          <img src={UserBox} alt="Account" className="navbar-icon" />
+        <a href="https://www.instagram.com/aqo.balloons/" className="navbar-link">
+          Contact Us!
         </a>
+        </div>
       </div>
     </nav>
   );
