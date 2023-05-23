@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Navbar from "./NavBar/NavBar";
 import Intro from "./Intro/intro";
 import StoreGrid from "./Items/columns";
@@ -8,28 +8,12 @@ import CalendarWrap from "./Calendar/cal-get";
 const Home = () => {
   const [items, setItems] = useState([
     {
-      name: "Sapphire Earrings",
-      price: "$49.99",
-      image: test,
-    },
-    { 
-      name: "Ruby Necklace",
-      price: "$69.99",
-      image: test,
-    },
-    {
-      name: "Amethyst Bracelet",
-      price: "$39.99",
-      image: test,
-    },
-    {
-      name: "Emerald Ring",
-      price: "$79.99",
+      name: "Hello Kitty Garland",
+      price: "$150.00",
       image: test,
     },
   ]);
 
- 
   return (
     <div className="Home">
       <Navbar />

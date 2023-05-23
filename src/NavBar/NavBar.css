@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap');
 
 .nav {
     display: flex;
@@ -16,7 +17,7 @@
   
   .h1 {
     font-weight: 700;
-    font-family: Corben, sans-serif;
+    font-family: Corben;
     font-size: 34px;
   }
   
@@ -26,7 +27,7 @@
     color: #000000;
     font-weight: 400;
     font-size: 20px;
-    font-family: Corben, sans-serif;
+    font-family: Corben;
   }
   
   .navbar-logo {
@@ -42,7 +43,7 @@
   .FindUs {
     margin-right: 20px;
     font-weight: 700;
-    font-family: Corben, sans-serif;
+    font-family: Corben;
     font-size: 20px;
     color: #000000;
     text-decoration: none;

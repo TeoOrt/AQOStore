@@ -6,7 +6,7 @@
 .react-calendar { 
     max-width: 100%;
     background-color: transparent;
-    color: white;
+    color: #000;
     border-radius: 8px;
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     font-family: Corben, sans-serif;

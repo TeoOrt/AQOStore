@@ -4,7 +4,7 @@ import StoreItem from "./items";
 
 function StoreGrid(props) {
   return (
-    <div className="store-grid">
+    <div className="store-grid" id="Gallery">
       {props.items.map((item, index) => (
         <StoreItem
           key={index}

@@ -14,15 +14,15 @@ function Navbar() {
 
         <div className="section-titles">
         <a
-          href="https://www.instagram.com/aqo.jewelry/"
+          href="#Gallery"
           className="navbar-link"
         >
           Balloon Gallery
         </a>
-        <a href="#store-grid" className="navbar-link">
+        <a href="#Calendar" className="navbar-link">
           Calendar
         </a>
-        <a href="#store-grid" className="navbar-link">
+        <a href="https://www.instagram.com/aqo.balloons/" className="navbar-link">
           Contact Us!
         </a>
         </div>

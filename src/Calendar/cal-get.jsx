@@ -1,31 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Calendar from "react-calendar";
-import { useState } from "react";
 import "./calendar.css";
 
+const CalendarWrap = () => {
+  const navigate = useNavigate();
+  const [date, setDate] = useState(new Date());
 
-const CalendarWrap =() =>{
+  const handleDateChange = (selectedDate) => {
+    setDate(selectedDate);
+    navigate(`/AdminAdd`);
+  };
 
-
-    const [date,setDate] = useState(new Date());
-    return(
-
-<div className="calendar-container">
-<Calendar onChange={setDate} value={date}/>
-</div>
-    );
-
-
-}
-
-
-
-
-const send_request = () => {
-
-
-
-}
-
+  return (
+    <div className="calendar-container" id="Calendar">
+      <Calendar onChange={handleDateChange} value={date} />
+    </div>
+  );
+};
 
 export default CalendarWrap;
