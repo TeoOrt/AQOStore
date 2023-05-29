@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import "./MyForm.css";
-
+import axios from "axios";
+import ReactConfetti from "react-confetti";
 function MyForm() {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState(null);
   const [showForm, setShowForm] = useState(false);
-  const [jewelryType, setJewelryType] = useState("");
+  const [category, setCategory] = useState("");
+  const [price, setPrice] = useState(0.0);
+
+  const [showSuccess, setShowSuccess] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -16,23 +20,25 @@ function MyForm() {
 
     // Add form data to the FormData object
     formData.append("image", image);
-    const data = {
-      title,
-      jewelryType,
-    };
-    formData.append("data", JSON.stringify(data));
+
+    formData.append("title", title);
+    formData.append("price", price.toPrecision);
+    formData.append("category", category);
+
     // Send a POST request to the server with the form data
-    fetch("http://127.0.0.1:3030/api/data", {
-      method: "POST",
-      body: formData,
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        // Update the UI with the newly uploaded image
+    axios
+      .post("http://localhost:5000/upload", formData, {
+        headers: {
+          "Content-Type": "multipart/form-data",
+        },
+      })
+      .then((res) => {
+        console.log(res.data);
+        setShowSuccess(true);
       })
       .catch((error) => {
-        console.error(error);
+        setShowSuccess(false);
+        console.error(e);
       });
   };
 
@@ -53,7 +59,7 @@ function MyForm() {
           className="my-form"
           onMount={handleFormMount}
         >
-          <h2 className="form-title">Upload Jewelry</h2>
+          <h2 className="form-title">Upload Balloons</h2>
 
           <div className="form-group">
             <label htmlFor="title" className="form-label">
@@ -72,14 +78,29 @@ function MyForm() {
           </div>
           <div>
             <label htmlFor="title" className="form-label">
-              Jewelry Type
+              Balloon Arch Category
             </label>
             <input
               type="text"
               name="jewleryType"
-              value={jewelryType}
-              onChange={(e) => setJewelryType(e.target.value)}
-              placeholder="Enter JewelryType here"
+              value={category}
+              onChange={(e) => setCategory(e.target.value)}
+              placeholder="Enter Category here"
+              className="form-input"
+              required
+            />
+          </div>
+
+          <div>
+            <label htmlFor="title" className="form-label">
+              Estimated Price
+            </label>
+            <input
+              type="text"
+              name="price"
+              value={price}
+              onChange={(e) => setPrice(e.target.value)}
+              placeholder="Enter Price here"
               className="form-input"
               required
             />
@@ -103,10 +124,16 @@ function MyForm() {
           <button type="submit" className="form-submit-btn">
             Upload
           </button>
+
+          {showSuccess && (
+            <div>
+              <p>Form submitted successfully!</p>
+              <ReactConfetti />
+            </div>
+          )}
         </form>
       </CSSTransition>
     </div>
   );
 }
-
 export default MyForm;
