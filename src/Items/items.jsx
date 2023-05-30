@@ -2,10 +2,14 @@ import React from "react";
 function StoreItem(props) {
   return (
     <div className="store-item">
-      <img src={props.image} alt={props.name} />
-      <h2>{props.name} {props.style}</h2>
+      <img
+        src={`https://aqo-balloon-gallery.s3.amazonaws.com/` + props.image}
+        alt={props.name}
+      />
+      <h2>
+        {props.name} {props.style}
+      </h2>
       <p>{props.price}</p>
-
     </div>
   );
 }

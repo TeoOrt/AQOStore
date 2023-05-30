@@ -4,7 +4,7 @@ import { Route } from "react-router-dom";
 import { Routes } from "react-router-dom";
 import Home from "./Home";
 import SignUpUser from "./UserLogin/UserSignUp/SignUp";
-import NavBarTest from "./SampleObjs/SampleJewlery";
+// import DisplayTest from "./SampleObjs/SampleJewlery";
 import MyForm from "./admin/newitems";
 import About from "./AboutPage/about";
 const App = () => {
@@ -12,7 +12,7 @@ const App = () => {
     <div className="App">
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Sample" element={<NavBarTest />} />
+        {/* <Route path="/Sample" element={<DisplayTest />} /> */}
         <Route path="/Login" element={<UserLogin />} />
         <Route path="/Login/SignUp" element={<SignUpUser />} />
         <Route path="/AdminAdd" element={<MyForm />} />

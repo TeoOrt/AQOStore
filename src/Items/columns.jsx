@@ -8,10 +8,10 @@ function StoreGrid(props) {
       {props.items.map((item, index) => (
         <StoreItem
           key={index}
-          image={item.image}
-          name={item.name}
+          image={item.s3_id}
+          name={item.title}
           price={item.price}
-          style= {item.style}
+          style={item.category}
         />
       ))}
     </div>

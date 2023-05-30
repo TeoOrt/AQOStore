@@ -22,7 +22,7 @@ function MyForm() {
     formData.append("image", image);
 
     formData.append("title", title);
-    formData.append("price", price.toPrecision);
+    formData.append("price", price);
     formData.append("category", category);
 
     // Send a POST request to the server with the form data
