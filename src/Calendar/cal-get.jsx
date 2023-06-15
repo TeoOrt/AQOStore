@@ -36,6 +36,11 @@ const CalendarWrap = () => {
   };
   return (
     <div id="Calendar">
+      <div className="Calendar-Container">
+        <h1 className="Title">Calendar</h1>
+
+        <h2 className="Instructions">Schedule an Event with Us! </h2>
+      </div>
       <Calendar onChange={onChange} value={date} />
 
       <Modal

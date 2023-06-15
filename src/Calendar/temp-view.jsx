@@ -34,29 +34,36 @@ const Modal = ({ handleClose, show, children, date, times }) => {
         <form onSubmit={handleSubmit}>
           <label>
             <h1>Available times:</h1>
-            <div>
-              <TimeSlot
-                className="TimeSlot"
-                value="9am"
-                currentTime={time}
-                handleChange={handleChange}
-                isAvailable={times.morning}
-              />
-
-              <TimeSlot
-                className="TimeSlot"
-                value="12pm"
-                currentTime={time}
-                handleChange={handleChange}
-                isAvailable={times.mid}
-              />
-              <TimeSlot
-                className="TimeSlot"
-                value="4pm"
-                currentTime={time}
-                handleChange={handleChange}
-                isAvailable={times.afternoon}
-              />
+            <div className="TimeSlots">
+              <ul>
+                <li>
+                  <TimeSlot
+                    className="TimeSlot"
+                    value="9am"
+                    currentTime={time}
+                    handleChange={handleChange}
+                    isAvailable={times.morning}
+                  />
+                </li>
+                <li>
+                  <TimeSlot
+                    className="TimeSlot"
+                    value="12pm"
+                    currentTime={time}
+                    handleChange={handleChange}
+                    isAvailable={times.mid}
+                  />
+                </li>
+                <li>
+                  <TimeSlot
+                    className="TimeSlot"
+                    value="4pm"
+                    currentTime={time}
+                    handleChange={handleChange}
+                    isAvailable={times.afternoon}
+                  />
+                </li>
+              </ul>
             </div>
           </label>
           <input type="submit" value="Submit" className="Button-close" />
