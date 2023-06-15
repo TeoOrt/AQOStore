@@ -1,34 +1,38 @@
 import React from "react";
-import AqoLogo from "./AQOLOGOSVG.svg";
 import "./NavBar.css";
-import Ballons from "./Ballons.svg";
+import Ballons from "./AQO(1).png";
 
-function Navbar() {
+const Navbar = () => {
   return (
-    <nav className="nav">
-      <div className="section">
-        <img src={Ballons} alt="Logo" className="navbar-logo" />
-        <h1 className="navbar-title">AQO Balloons</h1>
-      </div>
-      <div className="section">
+    <header className="header">
+      <img src={Ballons} alt="Logo" className="navbar-logo" />
 
-        <div className="section-titles">
-        <a
-          href="#Gallery"
-          className="navbar-link"
-        >
-          Balloon Gallery
-        </a>
-        <a href="#Calendar" className="navbar-link">
-          Calendar
-        </a>
-        <a href="https://www.instagram.com/aqo.balloons/" className="navbar-link">
-          Contact Us!
-        </a>
-        </div>
-      </div>
-    </nav>
+      <input className="side-menu" type="checkbox" id="side-menu" />
+      <label className="hamb" for="side-menu">
+        <span className="hamb-line"></span>
+      </label>
+
+      <nav className="nav">
+        <ul className="menu">
+          <li>
+            <a href="#Gallery">Balloon Gallery</a>
+          </li>
+          <li>
+            <a href="#Calendar">Calendar</a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/aqo.balloons/">Contact Us!</a>
+          </li>
+
+          <li>
+            <button href="#" className="Button-close">
+              Login
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </header>
   );
-}
+};
 
 export default Navbar;

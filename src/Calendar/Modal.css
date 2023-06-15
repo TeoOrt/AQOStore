@@ -1,0 +1,155 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  :root {
+    --vs-primary: 29 92 255;
+  }
+  
+  .modal-main {
+    position: fixed;
+    padding: 1rem 3rem;
+    background: white;
+    max-width: 400px;
+    padding-top: 2rem;
+    border-radius: 20px;
+    border: 0;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0 5px 30px 0 rgb(0 0 0 / 10%);
+    animation: fadeIn 1s ease both;
+    &::backdrop {
+      animation: fadeIn 1s ease both;
+      background: rgb(255 255 255 / 40%);
+      z-index: 2;
+      backdrop-filter: blur(20px);
+    }
+
+    h1 {
+      font-weight: 600;
+      font-size: 2rem;
+      padding: 1rem 2rem;
+      font-family: sans-serif;
+
+    }
+
+  }
+  
+
+  .display-block {
+    display: block;
+  }
+  
+  .display-none {
+    display: none;
+  }
+  
+
+
+  .TimeSlot{
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-family: sans-serif;
+
+  }
+
+.TimeSlots{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+  .TimeSlots ul{
+    list-style: none;
+  }
+
+  .TimeSlots li{
+    padding: 30px 0;
+  }
+
+
+
+.Button-close{
+  display: inline-block;
+	font-size: 0.8rem;
+	color: #fff !important;
+	background: rgb(var(--vs-primary) / 100%);
+	padding: 13px 25px;
+  margin: 10px 10px;
+	border-radius: 17px;
+	transition: background-color 0.1s ease;
+	box-sizing: border-box;
+	transition: all 0.25s ease;
+	border: 0;
+	cursor: pointer;
+	box-shadow: 0 10px 20px -10px rgb(var(--vs-primary) / 50%);
+	&:hover {
+		box-shadow: 0 20px 20px -10px rgb(var(--vs-primary) / 50%);
+		transform: translateY(-5px);
+	}
+}
+
+
+
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
+	}
+}
+
+
+
+
+
+@media (max-width: 926px) {
+  .modal-main{
+    max-width: 100%;
+    padding: 5rem 5rem;
+  }
+
+ }
+
+ input[type="radio"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #999;
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+  transition: 0.2s all linear;
+  margin-right: 10px;
+  position: relative;
+}
+
+input[type="radio"]:checked {
+  border: 6px solid #FFD33B;
+}
+
+input[type="radio"]:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+ 
+  transform: scale(0);
+  transition: 0.2s transform ease-in-out;
+}
+
+input[type="radio"]:checked:before {
+  transform: scale(0.5);
+}
