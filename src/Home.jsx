@@ -9,11 +9,14 @@ const Home = () => {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    axios
-      .get("/image-gallery")
-      .then((res) => setItems(res.data))
-      .catch((e) => console.error(e));
-  });
+    const get_images = () => {
+      axios
+        .get("/image-gallery")
+        .then((res) => setItems(res.data))
+        .catch((e) => console.error(e));
+    };
+    get_images();
+  }, []);
 
   return (
     <div className="Home">

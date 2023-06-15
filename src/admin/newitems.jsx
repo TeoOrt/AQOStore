@@ -27,7 +27,7 @@ function MyForm() {
 
     // Send a POST request to the server with the form data
     axios
-      .post("http://localhost:5000/upload", formData, {
+      .post("/upload", formData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
