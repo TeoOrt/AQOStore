@@ -43,7 +43,7 @@ const UserLogin = () => {
         <h1 style={Login_styles.logo_letter}>AQO Store</h1>
       </a>
       <form onSubmit={handleSubmit} style={Login_styles.form}>
-        <h2 style={Login_styles.login_title}>Login Babes</h2>
+        <h2 style={Login_styles.login_title}>User Login </h2>
         <input
           name="username"
           value={username}

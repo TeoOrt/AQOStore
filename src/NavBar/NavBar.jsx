@@ -1,8 +1,13 @@
 import React from "react";
 import "./NavBar.css";
 import Ballons from "./AQO(1).png";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const history = useNavigate();
+  const handleClick = () => {
+    history("/Login");
+  };
+
   return (
     <header className="header">
       <img src={Ballons} alt="Logo" className="navbar-logo" />
@@ -25,7 +30,7 @@ const Navbar = () => {
           </li>
 
           <li>
-            <button href="#" className="Button-close">
+            <button onClick={handleClick} className="Button-close">
               Login
             </button>
           </li>

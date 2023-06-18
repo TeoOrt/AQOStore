@@ -10,6 +10,9 @@ const CalendarWrap = () => {
 
   const [show, setShow] = useState(false);
 
+  const [cday, setCday] = useState(new Date());
+  cday.setHours(0, 0, 0, 0);
+
   const [available, setAvailable] = useState({
     morning: true,
     mid: true,
@@ -41,7 +44,7 @@ const CalendarWrap = () => {
 
         <h2 className="Instructions">Schedule an Event with Us! </h2>
       </div>
-      <Calendar onChange={onChange} value={date} />
+      <Calendar onChange={onChange} value={date} minDate={cday} />
 
       <Modal
         show={show}
