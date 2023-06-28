@@ -10,7 +10,7 @@ const Home = () => {
 
   const get_images = async () => {
     try {
-      const res = await axios.get("http://aqoballoons.com:5000/image-gallery");
+      const res = await axios.get("/ImageGalleryGood");
       console.log(res.data);
       setItems(res.data);
     } catch (e) {
