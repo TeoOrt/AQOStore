@@ -10,6 +10,9 @@ const CalendarWrap = () => {
 
   const [show, setShow] = useState(false);
 
+  const [cday, setCday] = useState(new Date());
+  cday.setHours(0, 0, 0, 0);
+
   const [available, setAvailable] = useState({
     morning: true,
     mid: true,
@@ -28,7 +31,9 @@ const CalendarWrap = () => {
   const getTimes = async (date) => {
     try {
       const temp = date.toISOString().split("T")[0];
-      const response = await axios.get(`http://localhost:8000/times/${temp}`);
+      console.log(temp);
+      const response = await axios.get(`/times/${temp}`);
+      console.log("got the times", response.data);
       setAvailable(response.data);
     } catch {
       console.log("Error fetching");
@@ -41,7 +46,7 @@ const CalendarWrap = () => {
 
         <h2 className="Instructions">Schedule an Event with Us! </h2>
       </div>
-      <Calendar onChange={onChange} value={date} />
+      <Calendar onChange={onChange} value={date} minDate={cday} />
 
       <Modal
         show={show}

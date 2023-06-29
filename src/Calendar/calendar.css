@@ -183,3 +183,21 @@
  }
  
  }
+
+
+ .react-calendar__month-view__days__day{
+  background-color: white;
+ }
+
+
+ .react-calendar__month-view__days__day--neighboringMonth{
+  color: #39393A;
+ }
+
+ .react-calendar__tile:disabled{
+  background-color: white;
+ }
+
+ .react-calendar__month-view__days__day--neighboringMonth{
+  color: #39393A;
+ }

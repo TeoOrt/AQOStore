@@ -8,13 +8,16 @@ import axios from "axios";
 const Home = () => {
   const [items, setItems] = useState([]);
 
+  const get_images = async () => {
+    try {
+      const res = await axios.get("/image-gallery");
+      setItems(res.data);
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
   useEffect(() => {
-    const get_images = () => {
-      axios
-        .get("/image-gallery")
-        .then((res) => setItems(res.data))
-        .catch((e) => console.error(e));
-    };
     get_images();
   }, []);
 

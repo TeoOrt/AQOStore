@@ -2,7 +2,6 @@ import React from "react";
 import axios from "axios";
 import { useState } from "react";
 import { Container, Heading } from "./stylecomponets.jsx";
-import AQOLogo from "../../NavBar/AQOLOGO.svg";
 import "./style.css";
 const SignUp = () => {
   //react hooks

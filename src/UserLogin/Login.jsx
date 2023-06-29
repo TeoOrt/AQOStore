@@ -4,10 +4,6 @@ import Login_styles from "./LoginStyles";
 import axios from "axios";
 import { useState } from "react";
 
-import { Route } from "react-router-dom";
-import { Routes } from "react-router-dom";
-import Home from "../Home";
-
 const UserLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -43,7 +39,7 @@ const UserLogin = () => {
         <h1 style={Login_styles.logo_letter}>AQO Store</h1>
       </a>
       <form onSubmit={handleSubmit} style={Login_styles.form}>
-        <h2 style={Login_styles.login_title}>Login Babes</h2>
+        <h2 style={Login_styles.login_title}>User Login </h2>
         <input
           name="username"
           value={username}
