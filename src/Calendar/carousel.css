@@ -1,0 +1,16 @@
+.my-carousel .carousel .slide {
+    background: none;
+  }
+  
+  .my-carousel .carousel .slide img {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* adjust this to control the maximum height of the images */
+    object-fit: contain;
+  }
+  
+  .my-carousel {
+    width: 80%; /* adjust this to control the width of the Carousel */
+    margin: auto;
+  }
+  

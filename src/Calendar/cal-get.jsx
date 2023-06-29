@@ -31,7 +31,9 @@ const CalendarWrap = () => {
   const getTimes = async (date) => {
     try {
       const temp = date.toISOString().split("T")[0];
-      const response = await axios.get(`http://localhost:8000/times/${temp}`);
+      console.log(temp);
+      const response = await axios.get(`/times/${temp}`);
+      console.log("got the times", response.data);
       setAvailable(response.data);
     } catch {
       console.log("Error fetching");

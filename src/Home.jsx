@@ -10,8 +10,7 @@ const Home = () => {
 
   const get_images = async () => {
     try {
-      const res = await axios.get("/ImageGalleryGood");
-      console.log(res.data);
+      const res = await axios.get("/image-gallery");
       setItems(res.data);
     } catch (e) {
       console.error(e);

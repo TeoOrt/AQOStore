@@ -4,10 +4,6 @@ import Login_styles from "./LoginStyles";
 import axios from "axios";
 import { useState } from "react";
 
-import { Route } from "react-router-dom";
-import { Routes } from "react-router-dom";
-import Home from "../Home";
-
 const UserLogin = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
