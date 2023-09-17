@@ -24,3 +24,4 @@
 <LandingPage />
 
 <Gallerygrid gallery_grid={list} />
+
