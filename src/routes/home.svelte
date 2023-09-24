@@ -5,7 +5,7 @@
   import Gallerygrid from "../lib/gallerygrid.svelte";
   import type { GalleryItem } from "../types/gallery";
   import { onMount } from "svelte";
-
+import GalleryTitle from "../lib/gallery-title.svelte";
   let list = [];
 
   onMount(async () => {
@@ -23,5 +23,7 @@
 <Header />
 <LandingPage />
 
+
+<GalleryTitle/>
 <Gallerygrid gallery_grid={list} />
 
