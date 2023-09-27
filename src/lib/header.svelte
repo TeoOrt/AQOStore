@@ -2,39 +2,28 @@
   import Balloon from "../assets/AQO(1).png";
   // import { push } from "svelte-spa-router";
   const aqo_balloons = "https://www.instagram.com/aqo.balloons/";
-<<<<<<< HEAD
-
-  const navigateToAbout = () => {
-    push("/login");
-  };
   let active = false;
 
   const toggleButton = () => {
     active = !active;
-   } 
-=======
->>>>>>> main
+  };
 </script>
 
 <nav>
   <img src={Balloon} alt="Aqo_Balloons_Logo" class="Active" />
 
   <button on:click={toggleButton} class="toggle-button">
-    <span class="line line1"></span>
-    <span class="line line2"></span>
-    <span class="line line3"></span>
+    <span class="bar" />
+    <span class="bar" />
+    <span class="bar" />
   </button>
   <div class="menu" class:active>
     <ul>
       <li><a href="#Gallery">Ballon Gallery</a></li>
       <li>Schedule an Event!</li>
       <li><a href={aqo_balloons}>Contact Us!</a></li>
-      <button on:click={navigateToAbout}>Login</button>
     </ul>
-<<<<<<< HEAD
-=======
     <button>Login</button>
->>>>>>> main
   </div>
 </nav>
 
@@ -57,7 +46,7 @@
     height: 25vh;
   }
   ul {
-    display:flex;
+    display: flex;
     list-style: none;
   }
 
@@ -82,8 +71,7 @@
     cursor: pointer;
   }
 
-
- .menu button {
+  .menu button {
     color: #fff;
     background: #ffd33b;
     font-family: "Corben", cursive;
@@ -99,52 +87,48 @@
     box-shadow: 0 10px 20px -10px rgb(var(--vs-primary) / 50%);
   }
 
-  .toggle-button{
+  .toggle-button {
     position: absolute;
     top: 1rem;
-    right:1rem;
+    right: 1rem;
     display: none;
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
     height: 21px;
     background-color: #fff;
-    border:none;
+    border: none;
   }
-  .bar{
+  .bar {
     height: 3px;
     width: 100%;
     background-color: #000;
     border-radius: 10px;
   }
 
-  @media (max-width:760px){
-    .toggle-button{
+  @media (max-width: 1000px) {
+    .toggle-button {
       display: flex;
     }
-    .menu{
+    .menu {
       display: none;
       width: 100%;
     }
-    nav{
+    nav {
       flex-direction: column;
       align-items: flex-start;
     }
 
-    ul{
+    ul {
       width: 100%;
       flex-direction: column;
     }
-    li{
+    li {
       text-align: center;
-      padding: .5rem 1rem;
+      padding: 0.5rem 1rem;
     }
-    .menu.active{
+    .menu.active {
       display: flex;
     }
-
   }
-
-
-
 </style>
