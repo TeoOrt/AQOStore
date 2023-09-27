@@ -1,7 +1,8 @@
 <script lang="ts">
   import Balloon from "../assets/AQO(1).png";
-  import { push } from "svelte-spa-router";
+  // import { push } from "svelte-spa-router";
   const aqo_balloons = "https://www.instagram.com/aqo.balloons/";
+<<<<<<< HEAD
 
   const navigateToAbout = () => {
     push("/login");
@@ -11,6 +12,8 @@
   const toggleButton = () => {
     active = !active;
    } 
+=======
+>>>>>>> main
 </script>
 
 <nav>
@@ -23,11 +26,15 @@
   </button>
   <div class="menu" class:active>
     <ul>
-      <li>Ballon Gallery</li>
+      <li><a href="#Gallery">Ballon Gallery</a></li>
       <li>Schedule an Event!</li>
       <li><a href={aqo_balloons}>Contact Us!</a></li>
       <button on:click={navigateToAbout}>Login</button>
     </ul>
+<<<<<<< HEAD
+=======
+    <button>Login</button>
+>>>>>>> main
   </div>
 </nav>
 

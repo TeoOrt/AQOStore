@@ -5,3 +5,13 @@ export type GalleryItem = {
     category : string;
   };
   
+
+
+  export type LabelInput = {
+    type:String,
+    name:String,
+    id:String,
+    value:String,
+    onChange:any,
+    placeholder:String,
+  }
