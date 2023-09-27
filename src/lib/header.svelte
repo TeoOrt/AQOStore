@@ -1,22 +1,18 @@
 <script lang="ts">
   import Balloon from "../assets/AQO(1).png";
-  import { push } from "svelte-spa-router";
+  // import { push } from "svelte-spa-router";
   const aqo_balloons = "https://www.instagram.com/aqo.balloons/";
-
-  const navigateToAbout = () => {
-    push("/login");
-  };
 </script>
 
 <nav class="navbar">
   <img src={Balloon} alt="Aqo_Balloons_Logo" />
   <div class="menu">
     <ul>
-      <li>Ballon Gallery</li>
+      <li><a href="#Gallery">Ballon Gallery</a></li>
       <li>Schedule an Event!</li>
       <li><a href={aqo_balloons}>Contact Us!</a></li>
     </ul>
-    <button on:click={navigateToAbout}>Login</button>
+    <button>Login</button>
   </div>
 </nav>
 

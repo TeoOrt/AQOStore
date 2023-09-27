@@ -5,12 +5,12 @@
   import Gallerygrid from "../lib/gallerygrid.svelte";
   import type { GalleryItem } from "../types/gallery";
   import { onMount } from "svelte";
-
-  let list = [];
+  import Modal from "../lib/create_account.svelte";
+  let list: any[] = [];
 
   onMount(async () => {
     try {
-      const response = await fetch("http://localhost:5000/image-gallery");
+      const response = await fetch("http://localhost:8000/image-gallery");
       const character = await response.json();
       const objArray = Object.values(character);
       list = [...list, ...objArray];
@@ -22,6 +22,14 @@
 
 <Header />
 <LandingPage />
+<div id="Gallery">
+  <Gallerygrid gallery_grid={list} />
+</div>
 
-<Gallerygrid gallery_grid={list} />
+<Modal />
 
+<style>
+  :global(:root) {
+    scroll-behavior: smooth;
+  }
+</style>
