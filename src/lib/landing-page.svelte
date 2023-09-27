@@ -2,13 +2,27 @@
   import Escape from "../assets/Escape.svg";
 </script>
 
-<img src={Escape} alt="Intro" />
+
+
+<!-- here we are going to do a slide show !!! -->
+
+<div class="Carousel">
+  <img src={Escape} alt="Intro" />
+</div>
+
 
 <style>
   img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 40%;
+    
+    width: 50vw;
   }
+
+    .Carousel{
+      display: flex;
+      width: 100%;
+      margin: 0 0;
+      align-items: center;
+      justify-content: center;
+    }
+
 </style>
