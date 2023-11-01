@@ -1,18 +1,23 @@
 <script lang="ts">
   import Balloon from "../assets/AQO(1).png";
+  import CreateAccount from "./modal_libs/create_account.svelte";
   // import { push } from "svelte-spa-router";
   const aqo_balloons = "https://www.instagram.com/aqo.balloons/";
-  let active = false;
+  
+  let active:Boolean = false;
+  let showModal:Boolean = true;
 
-  const toggleButton = () => {
+  const toggleButton =(active:Boolean) => {
     active = !active;
+    console.log(active);
   };
+
 </script>
 
 <nav>
   <img src={Balloon} alt="Aqo_Balloons_Logo" class="Active" />
 
-  <button on:click={toggleButton} class="toggle-button">
+  <button on:click={()=>active =!active} class="toggle-button">
     <span class="bar" />
     <span class="bar" />
     <span class="bar" />
@@ -22,10 +27,12 @@
       <li><a href="#Gallery">Ballon Gallery</a></li>
       <li>Schedule an Event!</li>
       <li><a href={aqo_balloons}>Contact Us!</a></li>
+      <button  on:click={()=>{showModal = !showModal;}}>Login</button>
     </ul>
-    <button>Login</button>
   </div>
 </nav>
+
+<CreateAccount showModal={showModal}/>
 
 <style>
   @import url("https://fonts.googleapis.com/css2?family=Corben:wght@700&display=swap");
