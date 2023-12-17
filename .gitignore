@@ -9,7 +9,7 @@
 # production
 /build
 
-bun.lockb
+.bun.lockb
 # misc
 .DS_Store
 .env.local
